@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+VN+Guides&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=TikTok+Sans:opsz,wght@12..36,300..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+  --primary-color: #eff1f3; /* Основной цвет */
+  --secondary-color: #2ecc71; /* Вторичный цвет */
+  --font-size: 28px; /* Размер шрифта по умолчанию */
+   --main-font: 'Winky Rough', Arial, sans-serif;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: var(--main-font);
+}
+
+/* Стиль для контейнера с видео */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* 100% высоты экрана */
+    overflow: hidden;  /* Видео не выходит за пределы блока */
+}
+
+/* Стили для видео */
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет экран видео */
+    transform: translate(-50%, -50%); /* Центрирует видео по вертикали и горизонтали */
+    z-index: 1;  /* Видео будет на заднем фоне */
+}
+
+
+
+
+.navbar {
+  position: fixed; /* Панель будет фиксированной поверх всего контента */
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  z-index: 10; /* Панель будет поверх видео */
+}
+
+.navbar .logo  img{
+  width: 100px;
+  height: 100px;
+  left: 5rem;
+  background-color: black;
+  position: relative;
+    transition: width 2s, height 2s, transform 2s;
+} 
+.navbar .logo a:hover{
+    width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+  right: 5rem;
+ font-size: var(--font-size);
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+  display: inline-block;
+  transition: color 0.3s ease;
+ font-size: var(--font-size);
+}
+
+.nav-links a:hover {
+ color:gold;
+  border-radius: 4px;
+  transform: scale(1.40);
+}
+.nav-links a:active{
+    color: yellow;
+}
+
+
+.img-container{
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 200px;
+  left: 55rem;
+  z-index: 10; 
+}
+.img-container img{
+    width: 500px;
+    height: 500px;
+    transform: rotate(-12deg); /* Небольшой наклон влево */
+}
+.text-container {
+  position: fixed;
+  top: 290px;
+  left: 0;
+  width: 100%;
+  padding: 0 100px;
+  color: white;
+  font-family: var(--main-font);
+  z-index: 10;
+}
+.text-container h1 {
+  font-size: 65px;
+    margin: 0 0 12px 0;
+}
+.text-container h2 {
+  font-size: 55px;
+   margin: 0;
+  
+}
+.text-container p {
+  font-size: 18px;
+}
+.btn-box button{
+   width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    left: 17rem;
+    position: absolute;
+    cursor: pointer;
+}
+#button{
+     width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    left: 6rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+button:hover{
+transform: scale(1.20);
+background-color: gold;
+font-family: var(--main-font);
+}
